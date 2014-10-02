@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/activity_main_search"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/activity_main_search_button"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/blue_light"
+        android:textColorHint="@color/blue_dark"
+        android:background="@null"
+        android:hint="City name"/>
+
+    <TextView
+        android:id="@+id/activity_main_search_button"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="Search"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_selector"/>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+        
+        <TextView
+            android:id="@+id/activity_main_sys_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Country : "/>
+
+        <TextView
+            android:id="@+id/activity_main_sys_country_value"
+            android:layout_toRightOf="@id/activity_main_sys_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Country"/>
+
+        <TextView
+            android:id="@+id/activity_main_sys_sunrise"
+            android:layout_below="@+id/activity_main_sys_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sunrise : "/>
+
+        <TextView
+            android:id="@+id/activity_main_sys_sunrise_value"
+            android:layout_below="@+id/activity_main_sys_country"
+            android:layout_toRightOf="@id/activity_main_sys_country"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Country"/>
+
+        <TextView
+            android:id="@+id/activity_main_sys_sunset"
+            android:layout_below="@+id/activity_main_sys_sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sunset : "/>
+
+        <TextView
+            android:id="@+id/activity_main_sys_sunset_value"
+            android:layout_below="@+id/activity_main_sys_sunrise"
+            android:layout_toRightOf="@id/activity_main_sys_country"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Country"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/activity_main_weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/activity_main_weather_icon"
+            android:text="Scatterred clouds"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
