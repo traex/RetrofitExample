@@ -17,6 +17,7 @@ out
 
 #Gradle
 .gradle/
+gradle/
 
 #Maven
 target
