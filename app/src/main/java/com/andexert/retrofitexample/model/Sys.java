@@ -16,10 +16,10 @@ public class Sys implements Serializable
     private String strCountry;
 
     @SerializedName("sunrise")
-    private Double sunriseTime;
+    private Long sunriseTime;
 
     @SerializedName("sunset")
-    private Double sunsetTime;
+    private Long sunsetTime;
 
     public String getStrCountry()
     {
@@ -31,12 +31,12 @@ public class Sys implements Serializable
         this.strCountry = strCountry;
     }
 
-    public Double getSunriseTime()
+    public Long getSunriseTime()
     {
         return sunriseTime;
     }
 
-    public Double getSunsetTime()
+    public Long getSunsetTime()
     {
         return sunsetTime;
     }
