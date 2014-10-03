@@ -84,6 +84,8 @@
     <orderEntry type="library" exported="" name="picasso-2.3.4" level="project" />
     <orderEntry type="library" exported="" name="retrofit-1.6.1" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
+    <orderEntry type="library" exported="" name="crouton-1.8.5" level="project" />
     <orderEntry type="library" exported="" name="butterknife-5.1.2" level="project" />
   </component>
 </module>

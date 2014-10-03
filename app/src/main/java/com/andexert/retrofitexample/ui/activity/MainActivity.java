@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.andexert.retrofitexample.R;
@@ -22,6 +24,8 @@ import java.util.TimeZone;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -29,6 +33,12 @@ import retrofit.client.Response;
 
 public class MainActivity extends Activity {
     private final static String TAG = MainActivity.class.getSimpleName();
+
+    @InjectView(R.id.activity_main_data)
+    protected RelativeLayout dataLayout;
+
+    @InjectView(R.id.activity_main_weather)
+    protected RelativeLayout weatherLayout;
 
     @InjectView(R.id.activity_main_search)
     protected EditText searchEditText;
@@ -83,13 +93,20 @@ public class MainActivity extends Activity {
                     sunsetTextView.setText(simpleDateFormat.format(sunsetDate));
                     sunriseTextView.setText(simpleDateFormat.format(sunriseDate));
 
+                    searchEditText.setText("");
                     Log.e(TAG, "City name : " + apiResponse.getStrCityName());
+                    dataLayout.setVisibility(View.VISIBLE);
+                    weatherLayout.setVisibility(View.VISIBLE);
                 }
 
                 @Override
                 public void failure(RetrofitError error)
                 {
                     Log.e(TAG, "Error : " + error.getMessage());
+                    searchEditText.setText("");
+                    Crouton.makeText(MainActivity.this, error.getMessage(), Style.ALERT).show();
+                    dataLayout.setVisibility(View.GONE);
+                    weatherLayout.setVisibility(View.GONE);
                 }
             });
         }

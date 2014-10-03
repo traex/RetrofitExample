@@ -18,7 +18,9 @@ public class RestClient
 
     public RestClient()
     {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder()
+            .registerTypeAdapterFactory(new ItemTypeAdapterFactory())
+            .create();
 
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setLogLevel(RestAdapter.LogLevel.FULL)
