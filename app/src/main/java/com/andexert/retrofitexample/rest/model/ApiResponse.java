@@ -7,17 +7,17 @@ import com.andexert.retrofitexample.model.Weather;
 import com.andexert.retrofitexample.model.Wind;
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 
 /**
  * Author :    Chutaux Robin
  * Date :      10/2/2014
  */
-public class ApiResponse implements Serializable
+@Parcel
+public class ApiResponse
 {
-    private static final long serialVersionUID = 4527727929667284194L;
-
     @SerializedName("coord")
     private Coord coord;
 

@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
 }
 
 dependencies {
@@ -25,4 +29,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:5.1.2'
     compile 'com.squareup.picasso:picasso:2.3.4'
     compile 'de.keyboardsurfer.android.widget:crouton:1.8.5'
+    compile 'org.parceler:parceler:0.2.13'
 }

@@ -2,16 +2,17 @@ package com.andexert.retrofitexample.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 import java.io.Serializable;
 
 /**
  * Author :    Chutaux Robin
  * Date :      10/2/2014
  */
-public class Coord implements Serializable
+@Parcel
+public class Coord
 {
-    private static final long serialVersionUID = -6230665672541697131L;
-
     @SerializedName("lon")
     private Double longitude;
 

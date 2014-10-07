@@ -2,16 +2,17 @@ package com.andexert.retrofitexample.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 import java.io.Serializable;
 
 /**
  * Author :    Chutaux Robin
  * Date :      10/2/2014
  */
-public class MainInfos implements Serializable
+@Parcel
+public class MainInfos
 {
-    private static final long serialVersionUID = -3145681233419724222L;
-
     @SerializedName("temp")
     private Double temp;
 
