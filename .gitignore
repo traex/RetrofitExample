@@ -8,27 +8,32 @@ gen
 .settings
 
 #IntelliJ IDEA
-build/
-.idea/
+.idea
 *.iml
 *.ipr
 *.iws
 out
 
 #Gradle
-.gradle/
+.gradle
+build
 
 #Maven
 target
 release.properties
 pom.xml.*
 project.properties
-gradle.properties
 
 #Ant
 build.xml
 local.properties
+gradle.properties
 proguard.cfg
 
 #OSX
-.DS_Store
+.DS_Store/
+
+# Crashlytics
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+crashlytics.properties
